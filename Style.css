@@ -1,0 +1,189 @@
+/* Estilos Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: #1b5e20;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a5d6a7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Seções de Informação */
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.sub-label {
+    font-size: 0.85rem; 
+    color: #555; 
+    margin-bottom: 5px;
+}
+
+/* Grid de Destaques */
+.grid-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilização da Calculadora de Renda */
+.calculadora {
+    background: #e8f5e9;
+    border: 2px solid #81c784;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c8e6c9;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Resultado da Calculadora */
+.resultado-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+    border-left: 5px solid #2e7d32;
+    display: none; /* Ocultado inicialmente */
+}
+
+.resultado-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.resultado-final {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2e7d32;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.txt-verde {
+    color: #2e7d32; 
+    font-weight: bold;
+}
+
+.txt-vermelho {
+    color: #c62828; 
+    font-weight: bold;
+}
+
+#mensagemDica {
+    margin-top: 15px; 
+    font-weight: 500; 
+    font-size: 0.95rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 5px;
+}
