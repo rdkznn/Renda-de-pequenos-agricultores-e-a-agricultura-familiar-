@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultivaRenda - Apoio à Agricultura Familiar</title>
+    <!-- Vinculação do arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho do Site -->
+    <header>
+        <h1>CultivaRenda</h1>
+        <p>Fortalecendo a agricultura familiar e o controle financeiro do pequeno produtor</p>
+    </header>
+
+    <!-- Menu de Navegação Local -->
+    <nav>
+        <a href="#sobre">Quem Somos</a>
+        <a href="#importancia">Agricultura Familiar</a>
+        <a href="#calculadora">Calcular Renda</a>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+
+        <!-- Seção Sobre Pequenos Produtores -->
+        <section id="sobre">
+            <h2>O Pequeno Produtor Agrícola</h2>
+            <p>Os pequenos produtores agrícolas gerenciam propriedades de menor escala, focando na produção diversificada e no abastecimento de mercados locais e regionais. Diferente dos grandes latifúndios monocultores, o pequeno produtor enfrenta desafios diários como a oscilação de preços de insumos, mudanças climáticas imprevisíveis e a falta de ferramentas administrativas para calcular sua margem real de lucro.</p>
+            <p>Ter o controle financeiro na ponta do lápis (ou na tela do celular) é essencial para garantir a sustentabilidade do negócio a longo prazo e evitar o endividamento.</p>
+        </section>
+
+        <!-- Seção Agricultura Familiar e Grid Informativo -->
+        <section id="importancia">
+            <h2>A Força da Agricultura Familiar</h2>
+            <p>A agricultura familiar é aquela onde a gestão e a mão de obra são predominantemente formadas por membros da mesma família. Ela é a base econômica de milhares de municípios brasileiros e carrega uma importância vital:</p>
+            
+            <div class="grid-info">
+                <div>
+                    <h3>Segurança Alimentar</h3>
+                    <p>Este setor é o grande responsável por colocar a comida de verdade na mesa da população. Mais de 70% dos alimentos consumidos diariamente no Brasil — como a mandioca, o feijão, o leite e as hortaliças — vêm de propriedades familiares.</p>
+                </div>
+                <div>
+                    <h3>Sustentabilidade e Comunidade</h3>
+                    <p>Além de gerar empregos no campo e frear o êxodo rural, a agricultura familiar costuma utilizar práticas mais sustentáveis, preservando a biodiversidade local e respeitando os ciclos da natureza de forma mais integrada.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Interativa - Calculadora Mensal -->
+        <section id="calculadora" class="calculadora">
+            <h2>Calculadora de Renda Mensal do Produtor</h2>
+            <p>Insira os valores estimados abaixo para calcular a sua renda líquida mensal (o valor real que sobra para a sua família após o pagamento de todas as despesas da lavoura).</p>
+            
+            <form id="rendaForm">
+                
+                <!-- Entradas de Receita -->
+                <div class="form-group">
+                    <label for="vendas">1. Vendas do Mês (R$):</label>
+                    <p class="sub-label">Total arrecadado com a venda de hortaliças, grãos, leite, animais, etc.</p>
+                    <input type="number" id="vendas" min="0" step="0.01" placeholder="Ex: 5000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="outrasReceitas">2. Outras Rendas da Propriedade (R$):</label>
+                    <p class="sub-label">Artesanato, turismo rural, agroindústria caseira ou benefícios associados.</p>
+                    <input type="number" id="outrasReceitas" min="0" step="0.01" value="0">
+                </div>
+
+                <!-- Entradas de Custo -->
+                <div class="form-group">
+                    <label for="insumos">3. Custos com Insumos (R$):</label>
+                    <p class="sub-label">Gastos com sementes, adubo, ração, defensivos ou ferramentas.</p>
+                    <input type="number" id="insumos" min="0" step="0.01" placeholder="Ex: 1200" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="infraestrutura">4. Custos de Infraestrutura e Logística (R$):</label>
+                    <p class="sub-label">Combustível, frete, energia elétrica da produção, água e manutenção de máquinas.</p>
+                    <input type="number" id="infraestrutura" min="0" step="0.01" placeholder="Ex: 800" required>
+                </div>
+
+                <button type="submit">Calcular Renda Mensal</button>
+            </form>
+
+            <!-- Painel de Resultados Dinâmicos -->
+            <div id="resultado" class="resultado-box">
+                <h3>Resumo Financeiro do Mês</h3>
+                <br>
+                <div class="resultado-item">
+                    <span>Faturamento Bruto (Total que entrou):</span>
+                    <span id="resBruto" class="txt-verde">R$ 0,00</span>
+                </div>
+                <div class="resultado-item">
+                    <span>Custos Operacionais (Total gasto):</span>
+                    <span id="resCustos" class="txt-vermelho">R$ 0,00</span>
+                </div>
+                <div class="resultado-item resultado-final">
+                    <span>Renda Líquida Mensal:</span>
+                    <span id="resLiquido">R$ 0,00</span>
+                </div>
+                <p id="mensagemDica"></p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé da Página -->
+    <footer>
+        <p>&copy; 2026 CultivaRenda - Projeto Escolar Prático. Desenvolvido para apoio ao campo.</p>
+    </footer>
+
+    <!-- Vinculação do arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
